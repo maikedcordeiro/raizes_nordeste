@@ -36,8 +36,9 @@ API back-end em **Python** e **FastAPI** com **SQLAlchemy** e **MySQL** para ges
 
 2. Acesse a documentação interativa em: http://127.0.0.1:8000/docs
 ## Endpoints e Regras Principais
-- Usuários e Autenticação: cadastro e login.
-- Unidades: cadastro e listagem.
-- Produtos: cadastro, listagem e atualização, com controle de disponibilidade (disponivel).
-- Pedidos: criação com validação de usuário, unidade, canal (APP, TOTEM, INTERNET, BALCAO, WHATSAPP) e itens, além de consulta e atualização de status (ABERTO, EM_PREPARO, FINALIZADO, CANCELADO).
-- Pagamento (Mock): POST /pedidos/{pedido_id}/pagamento — simula pagamento (PIX, CARTAO_CREDITO, CARTAO_DEBITO, DINHEIRO), gera código de transação (MOCK-...) e avança o status do pedido.
+- *Usuários e Autenticação:* cadastro e login.
+- *Unidades:* cadastro e listagem.
+- *Produtos:* cadastro, listagem e atualização, com controle de disponibilidade (disponivel).
+- *Pedidos:* criação com validação de usuário, unidade, canal (APP, TOTEM, INTERNET, BALCAO, WHATSAPP) e itens, além de consulta e atualização de status (ABERTO, EM_PREPARO, FINALIZADO, CANCELADO).
+- *Pagamento (Mock):* POST /pedidos/{pedido_id}/pagamento — simula pagamento (PIX, CARTAO_CREDITO, CARTAO_DEBITO, DINHEIRO), gera código de transação (MOCK-...) e avança o status do pedido.
+- *Promoções:* cadastro, listagem (com filtro de ativas) e ativação/desativação de promoções vinculadas ou não a um produto.

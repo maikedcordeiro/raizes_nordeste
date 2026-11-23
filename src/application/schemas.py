@@ -115,3 +115,26 @@ class PagamentoMockResponse(BaseModel):
     status_pagamento: str
     codigo_transacao: str
     status_pedido: str
+
+class PromocaoCreate(BaseModel):
+    titulo: str
+    descricao: str | None = None
+    desconto_percentual: float
+    ativa: bool = True
+    produto_id: int | None = None
+
+
+class PromocaoUpdate(BaseModel):
+    ativa: bool
+
+
+class PromocaoResponse(BaseModel):
+    id: int
+    titulo: str
+    descricao: str | None
+    desconto_percentual: float
+    ativa: bool
+    produto_id: int | None
+
+    class Config:
+        from_attributes = True

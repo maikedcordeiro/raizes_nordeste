@@ -42,6 +42,16 @@ class PedidoModel(Base):
     status = Column(String(30), default="ABERTO", nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
+class PromocaoModel(Base):
+    __tablename__ = "promocoes"
+
+    id = Column(Integer, primary_key=True, index=True)
+    titulo = Column(String(100), nullable=False)
+    descricao = Column(String(255), nullable=True)
+    desconto_percentual = Column(Float, nullable=False)
+    ativa = Column(Boolean, default=True, nullable=False)
+    produto_id = Column(Integer, ForeignKey("produtos.id"), nullable=True)
+
 class ItemPedidoModel(Base):
     __tablename__ = "itens_pedido"
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)

@@ -5,7 +5,7 @@ from src.api.unidades import router as unidades_router
 from src.api.produtos import router as produtos_router
 from src.api.pedidos import router as pedidos_router
 from src.api.pagamentos import router as pagamentos_router
-
+from src.api.promocoes import router as promocoes_router
 
 app = FastAPI(
     title="Raízes do Nordeste API",
@@ -20,6 +20,7 @@ app.include_router(unidades_router)
 app.include_router(produtos_router)
 app.include_router(pedidos_router)
 app.include_router(pagamentos_router)
+app.include_router(promocoes_router)
 
 @app.get("/")
 def raiz():
