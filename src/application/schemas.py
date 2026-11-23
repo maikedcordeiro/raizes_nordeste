@@ -104,3 +104,14 @@ class ProdutoUpdate(BaseModel):
 
 class PedidoStatusUpdate(BaseModel):
     status: str
+
+class PagamentoMockCreate(BaseModel):
+    metodo: str = "PIX"
+
+class PagamentoMockResponse(BaseModel):
+    pedido_id: int
+    valor_cobrado: float
+    metodo: str
+    status_pagamento: str
+    codigo_transacao: str
+    status_pedido: str
